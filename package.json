@@ -9,17 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@datocms/cda-client": "^0.2.6",
+    "@styled-icons/bootstrap": "^10.47.0",
+    "@styled-icons/boxicons-logos": "^10.47.0",
+    "@styled-icons/boxicons-solid": "^10.47.0",
+    "@styled-icons/fa-brands": "^10.47.0",
+    "@styled-icons/foundation": "^10.46.0",
+    "@styled-icons/remix-fill": "^10.46.0",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "styled-components": "^6.1.16"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }

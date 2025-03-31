@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import StyledComponentsRegistry from "./lib/registry";
+import Providers from "./providers/Providers";
+import { Roboto } from "next/font/google";
+import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  style: ["normal"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" className={roboto.className}>
+        <body>
+          <Navigation />
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <Footer />
+        </body>
+      </html>
+    </Providers>
   );
 }
