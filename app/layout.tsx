@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
 import Providers from "./providers/Providers";
-import { Roboto } from "next/font/google";
+import { Roboto, Montserrat } from "next/font/google";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 
@@ -9,6 +9,12 @@ const roboto = Roboto({
   style: ["normal"],
   subsets: ["latin"],
   weight: "500",
+});
+
+export const montserrat = Montserrat({
+  style: ["normal"],
+  subsets: ["latin"],
+  weight: "700",
 });
 
 export const metadata: Metadata = {

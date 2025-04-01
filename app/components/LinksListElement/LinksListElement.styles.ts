@@ -45,6 +45,7 @@ export const ListElement = styled.li`
   @media screen and (max-width: 960px) {
     transform: scale(0.8);
   }
+
   @media screen and (max-width: 768px) {
     transform: scale(0.7);
     margin-left: -25px;

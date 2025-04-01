@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const BackgroundSvg = styled.svg`
   width: 100%;
   height: 230px;
-
   position: absolute;
   left: 0;
   bottom: 0;
