@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@datocms/cda-client": "^0.2.6",
+    "@datocms/cda-client": "^0.2.7",
     "@gsap/react": "^2.1.2",
     "@styled-icons/bootstrap": "^10.47.0",
     "@styled-icons/boxicons-logos": "^10.47.0",
@@ -17,6 +17,8 @@
     "@styled-icons/fa-brands": "^10.47.0",
     "@styled-icons/foundation": "^10.46.0",
     "@styled-icons/remix-fill": "^10.46.0",
+    "graphql": "^16.10.0",
+    "graphql-request": "^7.1.2",
     "gsap": "^3.12.7",
     "next": "15.2.4",
     "react": "^19.0.0",

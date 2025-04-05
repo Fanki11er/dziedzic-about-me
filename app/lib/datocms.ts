@@ -1,37 +1,23 @@
-import { executeQuery, RawExecuteQueryOptions } from "@datocms/cda-client";
+import { executeQuery, ExecuteQueryOptions } from "@datocms/cda-client";
 import { cache } from "react";
 
-interface SerializedArgs {
-  query: string;
-  options: RawExecuteQueryOptions & {
-    token: string | undefined;
-    environment: string | undefined;
-  };
+async function execute<T>(serializedArgs: string): Promise<T> {
+  const [query, options] = JSON.parse(serializedArgs);
+  return executeQuery(query, options);
 }
 
-const dedupedPerformRequest = cache(
-  async (serializedArgs: string): Promise<unknown> => {
-    return executeQuery(
-      ...(JSON.parse(serializedArgs) as [string, SerializedArgs["options"]])
-    );
-  }
-);
+const dedupedPerformRequest = cache(execute);
 
-interface PerformRequestOptions extends Omit<RawExecuteQueryOptions, "token"> {
-  token?: string;
-  environment?: string;
-}
-
-export function performRequest(
+export function performRequest<T>(
   query: string,
-  options: PerformRequestOptions
-): Promise<unknown> {
+  options?: ExecuteQueryOptions
+): Promise<T> {
   return dedupedPerformRequest(
     JSON.stringify([
       query,
       {
         ...options,
-        token: process.env.NEXT_DATOCMS_API_TOKEN,
+        token: process.env.DATOCMS_API_TOKEN,
       },
     ])
   );

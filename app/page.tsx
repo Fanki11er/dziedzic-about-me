@@ -1,5 +1,3 @@
-"use client";
-
 import AnimatedCodeLines from "./components/AnimatedCodeLines/AnimatedCodeLines";
 import AnimatedHeader from "./components/AnimatedHeader/AnimatedHeader";
 import TopWrapper from "./components/TopWrapper/TopWrapper";
