@@ -1,11 +1,10 @@
 "use client";
 import styled from "styled-components";
 
-export const TitleHeader = styled.h1`
+const TitleHeader = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.XL};
   color: ${({ theme }) => theme.colors.veryLightBlue};
   width: 100%;
-
   @media screen and (min-width: 1600px) {
     font-size: calc(${({ theme }) => theme.fontSizes.XXL} - 2rem);
   }
@@ -17,7 +16,6 @@ export const TitleHeader = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: calc(${({ theme }) => theme.fontSizes.L} - 0.5rem);
   }
-
   @media screen and (max-width: 560px) {
     font-size: ${({ theme }) => theme.fontSizes.L};
   }
@@ -27,3 +25,5 @@ export const TitleHeader = styled.h1`
     margin-right: 10px;
   }
 `;
+
+export default TitleHeader;

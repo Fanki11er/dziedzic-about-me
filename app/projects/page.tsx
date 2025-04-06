@@ -1,8 +1,8 @@
 import TopWrapper from "../components/TopWrapper/TopWrapper";
-import { TitleHeader } from "./projectPage.styles";
 import { HeaderWrapper } from "../components/HeaderWrapper/HeaderWrapper.styles";
 import ProjectsAnimation from "../components/ProjectsAnimation/ProjectsAnimation";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+import TitleHeader from "../components/TitleHeader/TitleHeader.stylse";
 
 const ProjectsPage = () => {
   return (

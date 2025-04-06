@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const montserrat = Montserrat({
   style: ["normal"],
   subsets: ["latin"],
-  weight: "700",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

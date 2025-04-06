@@ -28,3 +28,13 @@ export type ProjectType = {
   ];
   projectPreview: PictureWithAlt;
 };
+
+export type AboutContentParagraph = {
+  paragraph: string;
+  id: string;
+};
+
+export type SingleAdditionalSkill = {
+  additionalSkill: string;
+  id: string;
+};
