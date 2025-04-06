@@ -6,39 +6,27 @@ import {
   SourceWrapper,
 } from "./ProjectsSection.styles";
 import sourceCodeImage from "../../assets/images/SourceCodeImage.svg";
+import SingleProject from "../SingleProject/SingleProject";
+import { projectsQuery } from "@/app/graphql/projectsQuery";
+import { performRequest } from "@/app/lib/datocms";
 
 type ProjectsData = {
-  allProject: ProjectType[];
+  allProjects: ProjectType[];
 };
 
-const ProjectsSection = () => {
-  // const {
-  //   allDatoCmsProject: { nodes },
-  // } = useStaticQuery(graphql`
-  //   {
-  //     allDatoCmsProject(sort: { fields: position, order: ASC }) {
-  //       nodes {
-  //         position
-  //         projectName
-  //         projectDescription
-  //         appLink
-  //         githubLink
-  //         credentials {
-  //           password
-  //           username
-  //         }
-  //         projectPreview {
-  //           alt
-  //           url
-  //         }
-  //       }
-  //     }
-  //   }
-  // `) as ProjectsInterface;
+const ProjectsSection = async () => {
+  const projects = await performRequest<ProjectsData>(projectsQuery);
+
+  const renderProjectsData = (projectData: ProjectsData) => {
+    const { allProjects } = projectData || [];
+    return allProjects.map((project) => {
+      return <SingleProject projectData={project} key={project.projectName} />;
+    });
+  };
 
   return (
     <ProjectsWrapper>
-      {/* {renderProjectsData(nodes)} */}
+      {renderProjectsData(projects)}
       <SourceWrapper>
         <SourceImage src={sourceCodeImage} alt={"Page source code image"} />
         <SourceLink
@@ -53,51 +41,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-
-// const renderProjectsData = (projectData: ProjectType[]) => {
-//   return projectData.map(
-//     ({
-//       position,
-//       projectName,
-//       projectDescription,
-//       projectPreview: { alt, url },
-//       appLink,
-//       githubLink,
-//       credentials,
-//     }) => {
-//       return (
-//         <SingleProject key={position}>
-//           <ContentWrapper>
-//             <Content>
-//               <Header>{projectName}</Header>
-//               <Description>
-//                 {projectDescription}
-//                 {credentials.length > 0 && (
-//                   <CredentialsWrapper>
-//                     <CredentialRow>
-//                       <span>Username:</span>
-//                       {credentials[0].username}
-//                     </CredentialRow>
-//                     <CredentialRow>
-//                       <span>Password:</span>
-//                       {credentials[0].password}
-//                     </CredentialRow>
-//                   </CredentialsWrapper>
-//                 )}
-//               </Description>
-//             </Content>
-//             <Screenshot src={url} alt={alt} />
-//           </ContentWrapper>
-//           <LinksWrapper>
-//             <OutsideLink href={githubLink} target="_blank">
-//               <span>Go</span>to code
-//             </OutsideLink>
-//             <OutsideLink href={appLink} target="_blank">
-//               <span>Go</span>to demo
-//             </OutsideLink>
-//           </LinksWrapper>
-//         </SingleProject>
-//       );
-//     }
-//   );
-// };

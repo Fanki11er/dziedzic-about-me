@@ -6,7 +6,6 @@ import SingleSkill from "../SingleSkill/SingleSkill";
 
 const Skills = async () => {
   const skills = await performRequest<SkillsData>(skillsQuery);
-  console.log(skills);
 
   const renderSkill = (skills: SkillsData) => {
     const { allTechnologies } = skills;
