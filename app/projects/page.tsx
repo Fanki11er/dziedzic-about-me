@@ -2,7 +2,7 @@ import TopWrapper from "../components/TopWrapper/TopWrapper";
 import { HeaderWrapper } from "../components/HeaderWrapper/HeaderWrapper.styles";
 import ProjectsAnimation from "../components/ProjectsAnimation/ProjectsAnimation";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
-import TitleHeader from "../components/TitleHeader/TitleHeader.stylse";
+import TitleHeader from "../components/TitleHeader/TitleHeader.styles";
 
 const ProjectsPage = () => {
   return (

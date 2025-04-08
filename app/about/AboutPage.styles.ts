@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import TitleHeader from "../components/TitleHeader/TitleHeader.stylse";
+import TitleHeader from "../components/TitleHeader/TitleHeader.styles";
 import Image from "next/image";
 
 export const StyledHeader = styled(TitleHeader)`

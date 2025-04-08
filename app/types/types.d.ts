@@ -38,3 +38,5 @@ export type SingleAdditionalSkill = {
   additionalSkill: string;
   id: string;
 };
+
+export type SubmitStatus = "SUCCESS" | "ERROR" | "PENDING" | "NONE";
