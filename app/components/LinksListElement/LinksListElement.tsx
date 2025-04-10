@@ -1,8 +1,10 @@
 import useLocationColor from "@/app/hooks/useLocationColor";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, SyntheticEvent } from "react";
 import { ListElement, MenuLabel } from "./LinksListElement.styles";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export type ListElementProps = PropsWithChildren & {
   linkToPage: string;
@@ -17,11 +19,50 @@ const LinksListElement = ({
   children,
   externalLink,
 }: ListElementProps) => {
-  const color = useLocationColor();
+  const color = useLocationColor(linkToPage);
   const pathname = usePathname();
+
+  gsap.registerPlugin(useGSAP);
+  const router = useRouter();
+
+  const tlIn = gsap.timeline();
+
+  const fadeIn = () => {
+    const transitionDiv = document.getElementById("transitionDiv");
+
+    return tlIn
+      .fromTo(
+        transitionDiv,
+        { x: "0%" },
+        {
+          delay: 0.2,
+          duration: 0.3,
+          x: "+=120%",
+        }
+      )
+      .to(transitionDiv, {
+        duration: 0.5,
+        backgroundColor: color,
+        onComplete: () => {
+          router.push(linkToPage);
+        },
+      });
+  };
+
+  const handleTransition = (e: SyntheticEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    fadeIn();
+  };
+
+  useGSAP(() => {
+    tlIn.clear();
+  });
+
   return (
     <ListElement>
       <Link
+        onClick={handleTransition}
         className={pathname === linkToPage ? "isActive" : ""}
         color={color}
         passHref={externalLink ? true : false}
