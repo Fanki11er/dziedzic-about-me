@@ -1,3 +1,4 @@
+"use client";
 import useLocationColor from "@/app/hooks/useLocationColor";
 import { PropsWithChildren, SyntheticEvent } from "react";
 import { ListElement, MenuLabel } from "./LinksListElement.styles";

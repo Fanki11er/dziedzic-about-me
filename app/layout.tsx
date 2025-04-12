@@ -4,6 +4,7 @@ import Providers from "./providers/Providers";
 import { Roboto, Montserrat } from "next/font/google";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
+import AnimatedMobileNavigation from "./components/AnimatedMobileNavigation/AnimatedMobileNavigation";
 
 const roboto = Roboto({
   style: ["normal"],
@@ -31,6 +32,7 @@ export default function RootLayout({
     <Providers>
       <html lang="en" className={roboto.className}>
         <body>
+          <AnimatedMobileNavigation />
           <Navigation />
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           <Footer />
