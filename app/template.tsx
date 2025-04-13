@@ -4,14 +4,14 @@ import { TransitionDiv } from "./components/TransitionDiv/TransitionDiv.styles";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import useLocationColor from "./hooks/useLocationColor";
-import { usePathname } from "next/navigation";
+import useInitialRender from "./hooks/useInitialRender";
 
 const Template = ({ children }: PropsWithChildren) => {
   const transitionDiv = useRef(null);
   gsap.registerPlugin(useGSAP);
   const color = useLocationColor();
-  const pathname = usePathname();
-  const historyLength = window?.history.length || 0;
+
+  const getIsInitial = useInitialRender();
 
   const fadeOut = () => {
     const tl = gsap.timeline();
@@ -23,7 +23,8 @@ const Template = ({ children }: PropsWithChildren) => {
   };
 
   useGSAP(() => {
-    if (historyLength > 1 || pathname !== "/") {
+    console.log(getIsInitial());
+    if (!getIsInitial()) {
       fadeOut();
     }
   });
