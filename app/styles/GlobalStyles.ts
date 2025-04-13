@@ -12,12 +12,19 @@ const GlobalStyles = createGlobalStyle`
         font-size: 16px;
         line-height: 1.5;
         scroll-behavior: smooth;
+        overflow-x: hidden;
+        width: 100vw;
+        min-height: 100dvh;
+        height: auto;
     }
 
     body {
         margin: 0;
         padding: 0;
+        width: 100vw;
+        min-height: 100dvh;
         overflow-x: hidden;
+        height: auto;
     }
 
     a {

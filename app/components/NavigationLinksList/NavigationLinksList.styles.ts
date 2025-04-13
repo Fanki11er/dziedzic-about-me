@@ -2,21 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.ul`
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   height: 100%;
-  width: 80%;
-
-  @media screen and (min-width: 1600px) {
-    width: 70%;
-  }
-
-  @media screen and (max-width: 960px) {
-    padding: 0 25px;
-    justify-content: space-around;
-  }
-  @media screen and (max-width: 768px) {
-    padding: 0 15px;
-  }
+  justify-content: space-between;
+  justify-self: flex-end;
 
   @media screen and (max-width: 560px) {
     &.hide {

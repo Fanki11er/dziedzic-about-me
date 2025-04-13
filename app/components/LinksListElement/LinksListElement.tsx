@@ -1,8 +1,7 @@
 "use client";
 import useLocationColor from "@/app/hooks/useLocationColor";
 import { PropsWithChildren, SyntheticEvent } from "react";
-import { ListElement, MenuLabel } from "./LinksListElement.styles";
-import Link from "next/link";
+import { ListElement, MenuLabel, StyledLink } from "./LinksListElement.styles";
 import { usePathname, useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -62,7 +61,7 @@ const LinksListElement = ({
 
   return (
     <ListElement>
-      <Link
+      <StyledLink
         onClick={handleTransition}
         className={pathname === linkToPage ? "isActive" : ""}
         color={color}
@@ -72,7 +71,7 @@ const LinksListElement = ({
       >
         {children}
         <MenuLabel>{label}</MenuLabel>
-      </Link>
+      </StyledLink>
     </ListElement>
   );
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+//!! FIX !!
 export const HeaderWrapper = styled.div`
   width: 100%;
   min-width: 340px;
@@ -71,8 +71,7 @@ export const SecondSmallHeder = styled(SmallHeader)`
   }
 
   @media screen and (max-width: 768px) {
-    left: 95px;
-    bottom: -25px;
+    bottom: -20px;
   }
 `;
 
@@ -109,5 +108,7 @@ export const MainHeader = styled.div`
 
   @media screen and (max-width: 560px) {
     margin: 5px 0 20px 0;
+
+    bottom: -5px;
   }
 `;

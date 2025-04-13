@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const LogoWrapper = styled(Image)`
   height: 75%;
-  width: auto;
+  min-width: 70px;
   align-self: center;
   justify-content: flex-start;
   @media screen and (max-width: 960px) {

@@ -16,7 +16,7 @@ export const MobileNavigationWrapper = styled.nav<Props>`
   height: 100vh;
   clip-path: circle(100px at 90% -10%);
   background-color: ${({ $color }) => $color};
-  min-width: 360px;
+  min-width: 350px;
   z-index: 8;
   transition: background-color 0.5s;
   display: none;

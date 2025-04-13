@@ -7,7 +7,7 @@ import Logo from "../Logo/Logo";
 const Navigation = () => {
   const color = useLocationColor();
   return (
-    <NavigationWrapper color={color}>
+    <NavigationWrapper $color={color}>
       <Logo />
       <NavigationLinksList hideOnMobile={true} />
     </NavigationWrapper>

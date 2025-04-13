@@ -34,7 +34,7 @@ export const TitleWrapper = styled.div`
   }
 
   @media screen and (max-width: 560px) {
-    min-width: 380px;
+    min-width: 350px;
   }
 `;
 
@@ -42,7 +42,7 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
   height: 135px;
   margin-top: 135px;
   padding-left: 40px;
@@ -63,6 +63,7 @@ export const Title = styled.div`
     height: 110px;
     margin-top: 50px;
   }
+
   @media screen and (max-width: 560px) {
     margin-left: 30px;
     padding-left: 0px;
@@ -136,6 +137,7 @@ export const HeroImage = styled(Image)`
   @media screen and (max-width: 768px) {
     width: 20vw;
   }
+
   @media screen and (max-width: 560px) {
     width: 22vw;
   }
