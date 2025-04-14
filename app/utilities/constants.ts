@@ -8,6 +8,12 @@ export const ROUTES = {
   notFound: "/404",
 };
 
+export const EXTERNAL_PAGES = {
+  gitHub: "https://github.com/Fanki11er",
+  linkedIn: "https://www.linkedin.com/in/dziedzic-k/",
+  youTube: "https://youtube.com/@fanki11er",
+};
+
 export const LOCATIONS_COLORS = {
   [ROUTES.home]: theme.colors.darkerBlue,
   [ROUTES.projects]: theme.colors.projects,

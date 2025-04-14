@@ -7,7 +7,7 @@ import { FilePersonFill as About } from "@styled-icons/bootstrap";
 import { Envelope } from "@styled-icons/boxicons-solid";
 import { Git, Youtube } from "@styled-icons/boxicons-logos";
 import { Linkedin } from "@styled-icons/fa-brands";
-import { ROUTES } from "@/app/utilities/constants";
+import { EXTERNAL_PAGES, ROUTES } from "@/app/utilities/constants";
 
 type Props = {
   hideOnMobile?: boolean;
@@ -40,7 +40,7 @@ const NavigationLinksList = ({ hideOnMobile }: Props) => {
         </Icon>
       </LinksListElement>
       <LinksListElement
-        linkToPage={"https://github.com/Fanki11er"}
+        linkToPage={EXTERNAL_PAGES.gitHub}
         label={"GitHub"}
         newWindow={true}
         externalLink={true}
@@ -50,7 +50,7 @@ const NavigationLinksList = ({ hideOnMobile }: Props) => {
         </Icon>
       </LinksListElement>
       <LinksListElement
-        linkToPage={"https://www.linkedin.com/in/dziedzic-k/"}
+        linkToPage={EXTERNAL_PAGES.linkedIn}
         label={"LinkedIn"}
         newWindow={true}
         externalLink={true}
@@ -60,7 +60,7 @@ const NavigationLinksList = ({ hideOnMobile }: Props) => {
         </Icon>
       </LinksListElement>
       <LinksListElement
-        linkToPage={"https://youtube.com/@fanki11er"}
+        linkToPage={EXTERNAL_PAGES.youTube}
         label={"YouTube"}
         newWindow={true}
         externalLink={true}
