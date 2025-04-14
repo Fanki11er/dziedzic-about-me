@@ -1,4 +1,5 @@
-import useLocationColor from "../hooks/useLocationColor";
+"use client";
+import useLocationColor from "@/app/hooks/useLocationColor";
 import { BackgroundSvg } from "./FooterBackground.styles";
 
 const FooterBackground = () => {

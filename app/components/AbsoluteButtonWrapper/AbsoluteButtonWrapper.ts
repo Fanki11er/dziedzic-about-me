@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 
-export const GitHubButtonWrapper = styled.div`
+export const AbsoluteButtonWrapper = styled.div`
   position: absolute;
   bottom: 8%;
   width: fit-content;

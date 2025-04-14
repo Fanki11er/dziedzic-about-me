@@ -6,7 +6,7 @@ import {
   LogoWrapper,
 } from "./Footer.styles";
 import logoImage from "../../assets/images/Logo.svg";
-import FooterBackground from "@/app/FooterBackground/FooterBackground";
+import FooterBackground from "../FooterBackground/FooterBackground";
 
 const Footer = () => {
   return (

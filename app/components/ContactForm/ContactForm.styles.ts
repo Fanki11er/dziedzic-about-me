@@ -3,7 +3,7 @@ import { Form } from "formik";
 import styled from "styled-components";
 
 type ButtonProps = {
-  $isDisabled: boolean;
+  $isDisabled?: boolean;
 };
 
 export const FormWrapper = styled.div`

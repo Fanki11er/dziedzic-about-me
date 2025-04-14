@@ -17,7 +17,7 @@ export const theme = {
     transparentContact: "rgba(59, 17, 66, 0.8)",
     lightTurquoise: "rgba(66, 233, 197, 1)",
     red: "rgba(217, 72, 99, 1)",
-    darkBlue: "#2E2D40",
+    darkBlue: "#1D2355",
     menuBlue: "rgba(94, 143, 204, 1)",
   },
   minScreen: "320px",
