@@ -23,7 +23,6 @@ const Template = ({ children }: PropsWithChildren) => {
   };
 
   useGSAP(() => {
-    console.log(getIsInitial());
     if (!getIsInitial()) {
       fadeOut();
     }
