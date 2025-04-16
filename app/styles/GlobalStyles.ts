@@ -16,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
         width: 100vw;
         min-height: 100dvh;
         height: auto;
+        scrollbar-color: ${theme.colors.menuBlue} ${theme.colors.dark} ;
+       
     }
 
     body {

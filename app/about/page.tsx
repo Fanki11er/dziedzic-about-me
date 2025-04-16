@@ -6,7 +6,7 @@ import AboutSection from "../components/AboutSection/AboutSection";
 
 const AboutPage = () => {
   return (
-    <>
+    <main>
       <TopWrapper>
         <>
           <HeaderWrapper $imageUrl={"/images/AboutMeBackground.svg"}>
@@ -19,7 +19,7 @@ const AboutPage = () => {
         </>
       </TopWrapper>
       <AboutSection />
-    </>
+    </main>
   );
 };
 

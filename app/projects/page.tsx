@@ -7,7 +7,7 @@ import GitHubButton from "../components/GitHubButtonWrapper/GitHubButtonWrapper"
 
 const ProjectsPage = () => {
   return (
-    <>
+    <main>
       <TopWrapper>
         <HeaderWrapper $imageUrl={"/images/ProjectsBackground.svg"}>
           <TitleHeader>
@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         <ProjectsAnimation />
       </TopWrapper>
       <ProjectsSection />
-    </>
+    </main>
   );
 };
 

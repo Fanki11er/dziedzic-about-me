@@ -6,7 +6,7 @@ import { ContactFormSection, Header } from "./contactPage.styles";
 
 const ContactPage = () => {
   return (
-    <>
+    <main>
       <TopWrapper>
         <>
           <HeaderWrapper $imageUrl={"./images/ContactBackground.svg"}>
@@ -20,7 +20,7 @@ const ContactPage = () => {
       <ContactFormSection>
         <ContactForm />
       </ContactFormSection>
-    </>
+    </main>
   );
 };
 
