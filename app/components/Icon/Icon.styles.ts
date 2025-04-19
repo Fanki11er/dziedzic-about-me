@@ -1,6 +1,6 @@
+"use client";
 import styled from "styled-components";
-// !! Add media ??
-//!! center
+
 export const Icon = styled.div`
   width: clamp(0.5rem, 2.5vw, 2rem);
   align-items: center;

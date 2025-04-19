@@ -47,7 +47,7 @@ export type PageMeta = {
   };
 };
 
-type GlobalSEO = {
+export type GlobalSEO = {
   globalSeo: {
     globalSeo: {
       description: string;

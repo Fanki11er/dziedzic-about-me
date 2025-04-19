@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Button,
   ButtonsWrapper,
@@ -27,7 +26,10 @@ const CookiesInformation = () => {
   }, []);
 
   const setCookiesInformationAsRed = () => {
-    setCookie(COOKIE_NAME, "true");
+    const date = new Date();
+    setCookie(COOKIE_NAME, "true", {
+      expires: new Date(date.setDate(date.getDate() + 30)),
+    });
     dialogRef.current?.close();
   };
 

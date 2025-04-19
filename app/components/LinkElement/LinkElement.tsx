@@ -1,24 +1,19 @@
 "use client";
 import useLocationColor from "@/app/hooks/useLocationColor";
 import { PropsWithChildren, SyntheticEvent } from "react";
-import { ListElement, MenuLabel, StyledLink } from "./LinksListElement.styles";
+import { MenuLabel } from "./LinksListElement.styles";
 import { usePathname, useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
+import { StyledLink } from "../StyledLink/StyledLink.styles";
 
 export type ListElementProps = PropsWithChildren & {
   linkToPage: string;
   label: string;
-  newWindow?: boolean;
-  externalLink?: boolean;
 };
 
-const LinksListElement = ({
-  linkToPage,
-  label,
-  children,
-  externalLink,
-}: ListElementProps) => {
+const LinkElement = ({ linkToPage, label, children }: ListElementProps) => {
   const color = useLocationColor(linkToPage);
   const pathname = usePathname();
 
@@ -60,20 +55,17 @@ const LinksListElement = ({
   });
 
   return (
-    <ListElement>
-      <StyledLink
-        onClick={handleTransition}
-        className={pathname === linkToPage ? "isActive" : ""}
-        color={color}
-        passHref={externalLink ? true : false}
-        href={linkToPage}
-        target={externalLink ? "_blank" : ""}
-      >
-        {children}
-        <MenuLabel>{label}</MenuLabel>
-      </StyledLink>
-    </ListElement>
+    <StyledLink
+      as={Link}
+      onClick={handleTransition}
+      className={pathname === linkToPage ? "isActive" : ""}
+      color={color}
+      href={linkToPage}
+    >
+      {children}
+      <MenuLabel>{label}</MenuLabel>
+    </StyledLink>
   );
 };
 
-export default LinksListElement;
+export default LinkElement;
