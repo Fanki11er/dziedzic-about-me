@@ -97,7 +97,8 @@ export const OutsideLink = styled.a`
   background-color: ${({ theme }) => theme.colors.dark};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.turquoise};
-  :visited {
+
+  &:visited {
     color: ${({ theme }) => theme.colors.turquoise};
   }
 

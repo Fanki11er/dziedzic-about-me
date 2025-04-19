@@ -18,7 +18,7 @@ export type ProjectType = {
   position: string;
   projectName: string;
   projectDescription: string;
-  appLink: string;
+  appLink?: string;
   githubLink: string;
   credentials: [
     {

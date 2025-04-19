@@ -55,9 +55,11 @@ const SingleProject = ({ projectData }: Props) => {
         <OutsideLink href={githubLink} target="_blank">
           <span>Go</span>to code
         </OutsideLink>
-        <OutsideLink href={appLink} target="_blank">
-          <span>Go</span>to demo
-        </OutsideLink>
+        {appLink && (
+          <OutsideLink href={appLink} target="_blank">
+            <span>Go</span>to demo
+          </OutsideLink>
+        )}
       </LinksWrapper>
     </SingleProjectWrapper>
   );
