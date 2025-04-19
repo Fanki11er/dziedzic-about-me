@@ -52,7 +52,7 @@ export const Screenshot = styled.img`
   bottom: 0;
   margin: auto 30px 130px 20px;
   transition: transform 0.8s;
-  :hover {
+  &:hover {
     transform: scale(1.8) translateX(-150px);
   }
 
@@ -63,7 +63,7 @@ export const Screenshot = styled.img`
     min-width: 250px;
     bottom: 130px;
 
-    :hover {
+    &:hover {
       transform: scale(1.8) translateY(-40px);
     }
   }
@@ -72,7 +72,7 @@ export const Screenshot = styled.img`
     bottom: 170px;
     height: 25%;
 
-    :hover {
+    &:hover {
       transform: scale(1.4) translateY(-20px);
     }
   }
