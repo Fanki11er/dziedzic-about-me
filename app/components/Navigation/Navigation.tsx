@@ -2,13 +2,13 @@
 import useLocationColor from "@/app/hooks/useLocationColor";
 import { NavigationWrapper } from "./Navigation.styles";
 import NavigationLinksList from "../NavigationLinksList/NavigationLinksList";
-import Logo from "../Logo/Logo";
+import NavigationLogo from "../NavigationLogo/NavigationLogo";
 
 const Navigation = () => {
   const color = useLocationColor();
   return (
     <NavigationWrapper $color={color}>
-      <Logo />
+      <NavigationLogo />
       <NavigationLinksList hideOnMobile={true} />
     </NavigationWrapper>
   );
