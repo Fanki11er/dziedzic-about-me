@@ -3,6 +3,9 @@ import TopWrapper from "../components/TopWrapper/TopWrapper";
 import { PersonImage, StyledHeader } from "./AboutPage.styles";
 import personImage from "../assets/images/Person.svg";
 import AboutSection from "../components/AboutSection/AboutSection";
+import { getPageMetadata } from "../utilities/seo";
+
+export const generateMetadata = () => getPageMetadata("About");
 
 const AboutPage = () => {
   return (

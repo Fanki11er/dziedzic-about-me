@@ -6,6 +6,9 @@ import heroImage from "./assets/images/Hero.svg";
 import SkillsSectionHeader from "./components/SkillsSectionHeader/SkillsSectionHeader";
 import { ROUTES } from "./utilities/constants";
 import Skills from "./components/Skills/Skills";
+import { getPageMetadata } from "./utilities/seo";
+
+export const generateMetadata = () => getPageMetadata("Home");
 
 const Home = () => {
   return (

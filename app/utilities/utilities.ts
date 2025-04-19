@@ -1,4 +1,5 @@
 import { LOCATIONS_COLORS, ROUTES } from "./constants";
+
 const { home, about, contact, projects, notFound } = ROUTES;
 
 export const getColorForLocation = (pathname: string) => {

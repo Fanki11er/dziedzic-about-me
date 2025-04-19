@@ -39,4 +39,26 @@ export type SingleAdditionalSkill = {
   id: string;
 };
 
+export type PageMeta = {
+  pageSeo: {
+    path: string;
+    pageName: string;
+    description?: string;
+  };
+};
+
+type GlobalSEO = {
+  globalSeo: {
+    globalSeo: {
+      description: string;
+      image: {
+        url: string;
+        alt: string;
+        width: string;
+        height: string;
+      };
+    };
+  };
+};
+
 export type SubmitStatus = "SUCCESS" | "ERROR" | "PENDING" | "NONE";

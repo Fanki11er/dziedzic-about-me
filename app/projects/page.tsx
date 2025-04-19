@@ -4,6 +4,9 @@ import ProjectsAnimation from "../components/ProjectsAnimation/ProjectsAnimation
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import TitleHeader from "../components/TitleHeader/TitleHeader.styles";
 import GitHubButton from "../components/GitHubButtonWrapper/GitHubButtonWrapper";
+import { getPageMetadata } from "../utilities/seo";
+
+export const generateMetadata = () => getPageMetadata("Projects");
 
 const ProjectsPage = () => {
   return (
