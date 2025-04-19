@@ -6,6 +6,8 @@ import Footer from "./components/Footer/Footer";
 import AnimatedMobileNavigation from "./components/AnimatedMobileNavigation/AnimatedMobileNavigation";
 import CookiesInformation from "./components/CookiesInformation/CookiesInformation";
 import { getGlobalMetadata } from "./utilities/seo";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto({
   style: ["normal"],
@@ -33,7 +35,11 @@ export default async function RootLayout({
           <CookiesInformation />
           <AnimatedMobileNavigation />
           <Navigation />
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </StyledComponentsRegistry>
           <Footer />
         </body>
       </html>
